@@ -1,10 +1,8 @@
-##### textMining
+##### Sentiment prediction using supervised learning
 
 supervised classification using Multinomial Naive Bayes & Randon Forest 
 
-(implement feature generation: bag of words, TF-IDF)
-
-implemented Bag of words, TF-IDF(with normalization). 
+implemented Bag of words, TF-IDF(with normalization)weighting, removed stop-words for feature engineering. 
 
 used cross-validation's split_train_test() to generate hold out test set
 
