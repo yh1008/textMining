@@ -6,7 +6,7 @@ implemented Bag of words, TF-IDF(with normalization)weighting, removed stop-word
 
 used cross-validation's split_train_test() to generate hold out test set
 
-print out performance metrics includes: accuracy, confusion matrix, AUC area
+print out performance metrics includes: accuracy, confusion matrix
 
 plot ROC curve with Matplotlib 
 
