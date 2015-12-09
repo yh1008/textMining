@@ -71,7 +71,6 @@ def get_train_wordTF(input_train_review_list):
 				word_dic[word] += 1
 			else:
 				word_dic[word] = 1 
-	#print "number of keys in the word_dic: %d" % (len(word_dic.keys()))
 	#word_dic: {"you": 3 }, 3 as the term count 
 	return word_dic, num_reviews
 
@@ -117,7 +116,7 @@ def get_IDF(input_word_dic, input_train_review_list, input_test_review_list, fla
 	#log(num_reviews/num_reviews_contains_word)
 	for entry in review_list:
 		unique_word_per_review = {}
-		review = entry[0] #review is each review list 
+		review = entry[0] #each review
 		review_tokenized= tokenizer.tokenize(review)
 		filtered_review = [word for word in review_tokenized if word not in stopwords]
 		filtered_review = [w.lower() for w in filtered_review]
@@ -139,7 +138,6 @@ def get_IDF(input_word_dic, input_train_review_list, input_test_review_list, fla
 			else:
 				word_to_docFreq_map[unique] += 1 
 	for word in word_to_docFreq_map:
-
 		if word_to_docFreq_map[word] >= 1:
 			word_to_idf_map[word] =  math.log(float(num_reviews)/word_to_docFreq_map[word])
 	return word_to_idf_map
