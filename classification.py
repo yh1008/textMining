@@ -7,6 +7,7 @@ import nltk
 import math
 import string
 import matplotlib.pyplot as plt
+from nltk.corpus import stopwords
 from nltk.tokenize import RegexpTokenizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
