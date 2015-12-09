@@ -23,8 +23,6 @@ tokenizer = RegexpTokenizer(r'\w+')
 
 print 'Loading Data'
 f = open('IMBD_train.csv')
-#f = open('train.csv')
-#f_test = open('yelp_test.csv')
 
 def pre_process (raw_file):
 	f = raw_file
@@ -40,11 +38,9 @@ def pre_process (raw_file):
 		review = review_list[i].rsplit(',', 1)[0]
 		review_tokenized= tokenizer.tokenize(review)
 		filtered_review = [word for word in review_tokenized if word not in stopwords]
-		#filtered_review = ' '.join(ch for ch in filtered_review if ch not in punctuations)
 		corpus.append(filtered_review) #['you like me', 'she hate you']		
 		sentiment = review_list[i].rsplit(',',1)[1]
 		sentiment = int(sentiment)
-		#review = re.sub(r',\d', "", review_list[i])
 		sentiment_score.append(sentiment)
 		corpus_cv[i] = [review]
 		#corpus_cv = [['she likes you'], ['he hate you']]
