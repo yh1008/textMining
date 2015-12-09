@@ -204,14 +204,6 @@ def tfidf_weighted_feature(input_bag_of_words, word_to_idf_map, word_to_index, n
 	tfidf = np.zeros((num_reviews, col))
 	word_to_index = word_to_index
 	for index in range(num_reviews):
-		if index == '100':
-			print "calculating tfidf at review[100]"
-		if index == '1000':
-			print "calculating tfidf at review[1000]"
-		if index == '2000':
-			print "calculating tfidf at review[2000]"
-		if index == '3000':
-			print "calculating tfidf at review[3000]"
 		for word in word_to_idf_map:		
 			size = np.sum(bag_of_words[index])
 			tfidf[index][word_to_index[word]] = (float(bag_of_words[index][word_to_index[word]])/size) * word_to_idf_map[word]
