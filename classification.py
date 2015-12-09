@@ -1,9 +1,4 @@
-## This script loads the tutorial data into Python and saves it in a
-## format friendly to the data analytis and visualization packages.
-## An alternative would be for each analysis script to begin with code
-## such as this, and each time read the data from the .csv file.
-
-## Imported packages need to have been installed on your computer -- see tutorial
+__author__      = "Emily Ye Hua"
 import time 
 import sys
 import re
