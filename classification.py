@@ -175,7 +175,6 @@ def get_bag_of_word(input_review, input_word_to_index, test_or_train, input_trai
 		for word in filtered_review:
 			word = word.lower()
 			if flag == "test":
-			
 				if word not in train_word_dic:
 					print word
 					pass
@@ -225,7 +224,6 @@ def test_model(model, bag_of_word_feature_test):
 	prediction = model.predict(bag_of_word_feature_test)
 	return prediction
 
-#def plot_confusion_matrix()
 def plot_auc(fpr,tpr,roc_area):
 	fpr = fpr
 	tpr = tpr
