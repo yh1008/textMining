@@ -182,10 +182,11 @@ def get_bag_of_word(input_review, input_word_to_index, test_or_train, input_trai
 					if bag_of_words[review_index][word_to_index[word]] == 0:
 						bag_of_words[review_index][word_to_index[word]] = 1
 					else:
-						
+						#pass #if you don't want the term count be there
 						bag_of_words[review_index][word_to_index[word]] += 1
 			else:
 				if bag_of_words[review_index][word_to_index[word]] != 0:
+					#pass #if you dont's want the term count
 					bag_of_words[review_index][word_to_index[word]] += 1
 				else:
 					bag_of_words[review_index][word_to_index[word]] = 1
