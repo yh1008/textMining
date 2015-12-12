@@ -88,11 +88,8 @@ def get_test_wordTF(input_train_word_dic, input_test_review_list):
 		review_tokenized= tokenizer.tokenize(review)
 		filtered_review = [word for word in review_tokenized if word not in stopwords]
 		for word in filtered_review :
-			print "filtered_review"
-			print word
 			if word in train_word_dic: 
 				word = word.lower()
-				#print word
 				if word in word_dic:
 					word_dic[word] += 1
 				else:
@@ -113,7 +110,7 @@ def get_IDF(input_word_dic, input_train_review_list, input_test_review_list, fla
 	num_reviews = len(review_list)
 	num_reviews = float(num_reviews)
 	length = len(word_dic)	
-	#log(num_reviews/num_reviews_contains_word)
+	#IDF = log(num_reviews/num_reviews_contains_word)
 	for entry in review_list:
 		unique_word_per_review = {}
 		review = entry[0] #each review
